@@ -4,68 +4,60 @@
   <meta charset='utf-8'/>
   <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
   <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
-  <meta content='index, follow' name='robots'/>
   <title>How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #2c3e50; line-height: 1.8; }
-    :root { --primary: #0066cc; --secondary: #00aa44; --border: #e0e0e0; --text: #333; }
+    :root { --primary: #0066cc; --secondary: #00aa44; --border: #e2e8f0; }
     .container { width: 100%; max-width: 850px; margin: 0 auto; padding: 0 20px; }
     
     /* Header */
-    header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--border); box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
     .header-content { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 26px; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .logo { font-size: 24px; font-weight: 700; color: var(--primary); text-decoration: none; }
     .logo-span { color: var(--secondary); }
-    .nav { display: flex; gap: 25px; align-items: center; }
-    .nav a { text-decoration: none; color: #666; font-weight: 500; font-size: 15px; }
-    .nav a:hover { color: var(--primary); }
+    .menu-btn { font-weight: 500; color: var(--primary); text-decoration: none; font-size: 16px; }
     
-    /* Post UX Layout */
-    .post-container { background: #fff; padding: 40px; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); }
-    h1 { font-size: 32px; line-height: 1.3; color: #111; margin-bottom: 15px; font-weight: 800; }
+    /* Post container */
+    .post-container { background: #fff; padding: 35px; border-radius: 12px; margin-top: 25px; border: 1px solid var(--border); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+    h1 { font-size: 30px; line-height: 1.35; color: #111; margin-bottom: 16px; font-weight: 800; }
     
-    /* Meta Data */
-    .post-meta { display: flex; gap: 15px; font-size: 14px; color: #7f8c8d; margin-bottom: 25px; border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; }
-    .meta-item { display: flex; align-items: center; gap: 5px; }
-    
+    /* Perfect Responsive Meta UX Grid */
+    .meta-wrapper { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 14px; color: #64748b; margin-bottom: 25px; border-bottom: 1px solid #f1f5f9; padding-bottom: 15px; }
+    .meta-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+    .meta-item svg { width: 15px; height: 15px; fill: currentColor; display: inline-block; vertical-align: middle; }
+    .meta-sep { color: #cbd5e1; font-weight: bold; }
+
     /* Featured Image */
     .featured-image-wrapper { width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 30px; border: 1px solid var(--border); }
     .featured-image { width: 100%; height: auto; display: block; }
     
-    /* Typography */
-    h2 { font-size: 24px; color: #111; margin: 35px 0 15px 0; border-bottom: 2px solid #ff9900; padding-bottom: 8px; font-weight: 700; }
-    h3 { font-size: 20px; color: var(--primary); margin: 25px 0 12px 0; font-weight: 700; }
-    p { margin-bottom: 20px; font-size: 16px; color: #444; }
+    /* Typography & Core Content */
+    h2 { font-size: 22px; color: #111; margin: 35px 0 15px 0; border-bottom: 2px solid #ff9900; padding-bottom: 8px; font-weight: 700; }
+    p { margin-bottom: 20px; font-size: 16px; color: #334155; }
     
-    /* Code/Keys styling */
-    kbd { background: #f1f2f6; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 14px; color: #2c3e50; font-weight: bold; border: 1px solid #ccc; box-shadow: 0 1px 0 rgba(0,0,0,0.2); }
-    code { background: #f1f2f6; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 15px; color: #c0392b; font-weight: 600; }
+    kbd { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: inherit; font-size: 13px; color: #0f172a; font-weight: bold; border: 1px solid #cbd5e1; box-shadow: 0 1px 0 rgba(0,0,0,0.1); }
     
     ul, ol { margin-left: 20px; margin-bottom: 25px; }
-    li { margin-bottom: 10px; font-size: 16px; color: #444; }
+    li { margin-bottom: 10px; font-size: 16px; color: #334155; }
     
-    /* Design Alert Boxes */
-    .callout-box { background: #fafafa; border: 1px solid #eee; padding: 20px; border-radius: 8px; margin: 25px 0; }
-    .callout-box h4 { margin-bottom: 12px; font-size: 18px; color: #ff9900; font-weight: bold; }
+    .callout-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; margin: 25px 0; }
+    .callout-box h4 { margin-bottom: 12px; font-size: 17px; color: #f97316; font-weight: bold; }
     
-    .accent-box { background: #fffdf5; border-left: 4px solid #ff9900; border-radius: 6px; padding: 15px; margin-bottom: 20px; }
-    .accent-box strong { color: #111; display: block; font-size: 16px; margin-bottom: 5px; }
+    .accent-box { background: #fffdf5; border-left: 4px solid #ff9900; border-radius: 6px; padding: 15px; margin-bottom: 20px; border-top: 1px solid #fef3c7; border-bottom: 1px solid #fef3c7; border-right: 1px solid #fef3c7; }
+    .accent-box strong { color: #111; display: block; font-size: 15px; margin-bottom: 5px; }
+    .accent-box span { color: #475569; font-size: 15px; }
     
-    .faq-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #f1f1f1; }
-    .faq-q { color: #111; font-size: 17px; font-weight: bold; margin-bottom: 6px; }
-    .faq-a { color: #444; font-size: 16px; }
+    .faq-item { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #f1f5f9; }
+    .faq-q { color: #111; font-size: 16px; font-weight: bold; margin-bottom: 6px; }
+    .faq-a { color: #475569; font-size: 15px; }
 
-    @media (max-width: 768px) {
-      .post-container { padding: 20px; }
-      h1 { font-size: 24px; }
+    @media (max-width: 600px) {
+      .post-container { padding: 20px; margin-top: 15px; }
+      h1 { font-size: 22px; }
+      .meta-wrapper { gap: 6px 12px; }
+      .meta-sep { display: none; } /* Hide separator on mobile wrap for clean stacking */
     }
-    
-    /* Footer */
-    footer { background: #fff; padding: 35px 0; margin-top: 50px; border-top: 1px solid var(--border); text-align: center; }
-    .footer-links { margin-bottom: 15px; display: flex; justify-content: center; gap: 20px; }
-    .footer-links a { color: var(--primary); text-decoration: none; font-size: 14px; }
-    .footer-copy { color: #999; font-size: 13px; }
   </style>
 </head>
 <body>
@@ -73,13 +65,7 @@
     <div class='container'>
       <div class='header-content'>
         <a class='logo' href='/'>Enye<span class='logo-span'>Ñ</span></a>
-        <nav class='nav'>
-          <a href='/'>Home</a>
-          <a href='/blog.html'>Blog</a>
-          <a href='/about.html'>About</a>
-          <a href='/privacy.html'>Privacy</a>
-          <a href='/contact.html'>Contact</a>
-        </nav>
+        <a class='menu-btn' href='#'>Menu</a>
       </div>
     </div>
   </header>
@@ -89,14 +75,25 @@
       <!-- Title -->
       <h1>How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad</h1>
       
-      <!-- Metadata -->
-      <div class="post-meta">
-        <div class="meta-item">📅 Published: July 13, 2026</div>
-        <div class="meta-item">👤 By: Editorial Team</div>
-        <div class="meta-item">🏷️ Category: Laptop Guides</div>
+      <!-- New Flat Clean SVG Icons & Inline Meta Layout -->
+      <div class="meta-wrapper">
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+          July 13, 2026
+        </div>
+        <span class="meta-sep">•</span>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          By: Editorial Team
+        </div>
+        <span class="meta-sep">•</span>
+        <div class="meta-item">
+          <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 8c-.83 0-1.5-.67-1.5-1.5S4.67 5 5.5 5 7 5.67 7 6.5 6.33 8 5.5 8z"/></svg>
+          Laptop Guides
+        </div>
       </div>
 
-      <!-- Featured Image (Laptop Specific Image) -->
+      <!-- Featured Image (Perfect Laptop Thumbnail) -->
       <div class="featured-image-wrapper">
         <img class="featured-image" alt="How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHHnFvh8-4kCzJ4Q5mVK-Zc_ZUsK0dyROCUmu2WtSQGkKWTDTz3nkN2DfAm5HgTdjYneJTXiyIF9WRaEP5F1xtDzSS1JBvl7Z5nXluH8IwSkvI6EUfeOl2uZ3oVfZxkqvuSH4Higjnn46koc4YkHPculNkzfZNqjEUxLt8UEZCp4MyNMd6syejfKZVxf9J/s1408/1000076333.webp"/>
       </div>
@@ -184,19 +181,5 @@
       <p>We Make This Enye copy paste tool to easy your life where you find Easy copy paste and shortcut for all devoice which you need.</p>
     </article>
   </main>
-
-  <footer>
-    <div class='container'>
-      <div class='footer-links'>
-        <a href='/'>Home</a>
-        <a href='/about.html'>About us</a>
-        <a href='/privacy.html'>Privacy Policy</a>
-        <a href='/contact.html'>Contact us</a>
-      </div>
-      <div class='footer-copy'>
-        <p>Copyright 2026 Enye CopyPaste. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
 </body>
 </html>
