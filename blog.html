@@ -2,125 +2,94 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'/>
-  <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
   <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
-  <meta content='index, follow' name='robots'/>
-  <title>Enye CopyPaste - Blog & Guides</title>
-  <meta content='Learn how to type and copy Enye special characters on any device with our free detailed guides.' name='description'/>
-  
+  <title>Latest Tips &amp; Tutorials - Enye Copy Paste</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #333; line-height: 1.6; }
-    :root { --primary: #0066cc; --secondary: #00aa44; --border: #e0e0e0; --text: #333; }
-    .container { width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    .container { width: 100%; max-width: 850px; margin: 0 auto; padding: 0 20px; }
     
-    /* Header */
-    header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    header { background: #fff; padding: 15px 0; border-bottom: 1px solid #e0e0e0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
     .header-content { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 26px; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .logo-span { color: var(--secondary); }
-    .nav { display: flex; gap: 25px; align-items: center; }
-    .nav a { text-decoration: none; color: #666; font-weight: 500; font-size: 15px; transition: color 0.3s; }
-    .nav a:hover { color: var(--primary); }
-    .menu-toggle { display: none; background: 0; border: 0; font-size: 22px; cursor: pointer; color: var(--primary); }
+    .logo { font-size: 24px; font-weight: 700; color: #0066cc; text-decoration: none; }
+    .logo-span { color: #00aa44; }
+    .menu-btn { font-weight: 500; color: #0066cc; text-decoration: none; font-size: 16px; }
 
-    @media(max-width: 768px) { 
-      .menu-toggle { display: block; } 
-      .nav { display: none; flex-direction: column; gap: 15px; position: absolute; top: 65px; right: 20px; background: #fff; padding: 20px; border: 1px solid var(--border); border-radius: 8px; width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); } 
-      .nav.show { display: flex; } 
+    .hero-section { text-align: center; padding: 40px 10px 20px; }
+    .hero-section h1 { font-size: 32px; color: #111; font-weight: 800; margin-bottom: 10px; }
+    .hero-section p { color: #666; font-size: 16px; max-width: 500px; margin: 0 auto; }
+
+    /* Grid layout for Cards */
+    .grid-container { display: flex; flex-direction: column; gap: 30px; margin-top: 20px; margin-bottom: 50px; }
+    .card { background: #fff; border-radius: 12px; border: 1px solid #e0e0e0; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.03); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-2px); }
+    
+    .card-img-link { display: block; width: 100%; border-bottom: 1px solid #eee; }
+    .card-img { width: 100%; height: auto; display: block; object-fit: cover; }
+    
+    .card-content { padding: 25px; }
+    .card-title { font-size: 22px; color: #111; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+    .card-title a { text-decoration: none; color: #111; }
+    .card-title a:hover { color: #0066cc; }
+    .card-desc { color: #555; font-size: 15px; margin-bottom: 20px; line-height: 1.6; }
+    
+    .read-btn { display: inline-block; background: #0066cc; color: #fff; padding: 10px 22px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s; }
+    .read-btn:hover { background: #0052a3; }
+
+    @media (max-width: 600px) {
+      .hero-section h1 { font-size: 28px; }
+      .card-content { padding: 18px; }
+      .card-title { font-size: 18px; }
     }
-
-    /* Blog Header */
-    .blog-header { text-align: center; padding: 50px 0 30px; }
-    .blog-header h1 { font-size: 32px; color: var(--text); margin-bottom: 10px; }
-    .blog-header p { font-size: 16px; color: #666; }
-
-    /* Blog Grid */
-    .blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-bottom: 50px; }
-    .blog-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
-    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-    .blog-card-img { width: 100%; height: 220px; object-fit: cover; }
-    .blog-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-    .blog-card-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; text-decoration: none; line-height: 1.4; }
-    .blog-card-title:hover { color: var(--primary); }
-    .blog-card-excerpt { font-size: 14px; color: #666; margin-bottom: 20px; line-grow: 1; }
-    .blog-card-btn { align-self: flex-start; background: var(--primary); color: #fff; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; font-weight: 600; }
-
-    @media(max-width: 768px) {
-      .blog-grid { grid-template-columns: 1fr; }
-    }
-
-    /* Footer */
-    footer { background: #fff; padding: 35px 0; border-top: 1px solid var(--border); text-align: center; margin-top: 50px; }
-    .footer-links { margin-bottom: 15px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-    .footer-links a { color: var(--primary); text-decoration: none; font-size: 14px; }
-    .footer-links a:hover { text-decoration: underline; }
-    .footer-copy { color: #999; font-size: 13px; }
   </style>
 </head>
 <body>
+
   <header>
     <div class='container'>
       <div class='header-content'>
         <a class='logo' href='/'>Enye<span class='logo-span'>Ñ</span></a>
-        <button class='menu-toggle' onclick='toggleMobileMenu()'>Menu</button>
-        <nav class='nav' id='navMenu'>
-          <a href='/'>Home</a>
-          <a href='/blog.html' style="color: var(--primary);">Blog</a>
-          <a href='/about.html'>About</a>
-          <a href='/privacy.html'>Privacy</a>
-          <a href='/contact.html'>Contact</a>
-        </nav>
+        <a class='menu-btn' href='#'>Menu</a>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <div class="blog-header">
+    <div class="hero-section">
       <h1>Latest Tips &amp; Tutorials</h1>
       <p>Easy-to-follow guides on special characters and typing methods</p>
     </div>
 
-    <div class='blog-grid'>
-      <article class='blog-card'>
-        <img class='blog-card-img' alt='How to Type Enye on Keyboard PC and Mobile' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5anU-24IEKDe4FKtQro_Qn6_7LcSwtCNPbzRraU3GPAGtU1egYvkxYresMpc3H0LN4JUN187ukvPg2HYm7hAOOf6yojRsZ6utk0gDjzGsZhhMjssC7PepEYTWuqEfSqY2dTlPmDutDnzG5RB3jF_6lhWNYdHwENgYB0LD0DQJebF0SfW82gZCoTIH03Nd/s1408/1000076068.webp'/>
-        <div class='blog-card-content'>
-          <a class='blog-card-title' href='how-to-type-enye-keyboard-pc-mobile.html'>How to Type Enye (Ñ or ñ) on Keyboard: PC, Laptop &amp; Mobile</a>
-          <p class='blog-card-excerpt'>Learn the fastest keyboard shortcuts and hidden tricks to type the Spanish Enye character on Windows, macOS, Android, and iOS devices effortlessly.</p>
-          <a class='blog-card-btn' href='how-to-type-enye-keyboard-pc-mobile.html'>Read Full Guide</a>
+    <div class="grid-container">
+      <!-- Card 1: Without Numpad (Greenish Custom Thumbnail Set Successfully) -->
+      <article class="card">
+        <a class="card-img-link" href="how-to-type-enye-without-numpad.html">
+          <img class="card-img" alt="How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHHnFvh8-4kCzJ4Q5mVK-Zc_ZUsK0dyROCUmu2WtSQGkKWTDTz3nkN2DfAm5HgTdjYneJTXiyIF9WRaEP5F1xtDzSS1JBvl7Z5nXluH8IwSkvI6EUfeOl2uZ3oVfZxkqvuSH4Higjnn46koc4YkHPculNkzfZNqjEUxLt8UEZCp4MyNMd6syejfKZVxf9J/s1408/1000076333.webp"/>
+        </a>
+        <div class="card-content">
+          <h2 class="card-title">
+            <a href="how-to-type-enye-without-numpad.html">How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad</a>
+          </h2>
+          <p class="card-desc">Can't type special characters because your laptop or TKL keyboard lacks a numeric keypad block? Learn the best shortcuts and tricks to type Enye instantly.</p>
+          <a class="read-btn" href="how-to-type-enye-without-numpad.html">Read Full Guide</a>
         </div>
       </article>
 
-      <article class='blog-card'>
-        <img class='blog-card-img' alt='How to Type Ñ without Numpad' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS6PO6zvPNcWpajzLApSdGYwSbrB1KoF_05LUiNDYnKA_bp_4DjiGyKSa-vgoXqOyfNqMJkcl9TlMdIctPuClA8uGDws5ghgIRWs_b9RxOkrAAVCG9btZsNxMy94h0GVzh3KZhubljnb_r-SwSxqU9EE94VJuIhpK-K8wPtD8TsVjVnX5z8AXB_-W7WD2D/s1408/1000076069.webp'/>
-        <div class='blog-card-content'>
-          <a class='blog-card-title' href='how-to-type-enye-without-numpad.html'>How to Type Ñ on Keyboard Without Numpad (Laptop Guide)</a>
-          <p class='blog-card-excerpt'>Don't have a numeric keypad on your laptop? Discover easy alternative tricks, shortcuts, and mapping methods to type capital Ñ and small ñ instantly.</p>
-          <a class='blog-card-btn' href='how-to-type-enye-without-numpad.html'>Read Full Guide</a>
+      <!-- Card 2: PC, Laptop, Mac & Mobile (Multi-device Keyboard Blue/Black Thumbnail Set Successfully) -->
+      <article class="card">
+        <a class="card-img-link" href="how-to-type-enye-keyboard-pc-mobile.html">
+          <img class="card-img" alt="How To Type Enye Ñ or ñ in Keyboard" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYs2mpyswjqPE4iwvocrWb8k6JdAcFUjnB8k54vY-Bt0BvtYJg04Au1pJAJOyG8FVAP71842ISspr7UnpYB8otG-aJUQzMR5yBSS6-KlAOIVTU_g7SdI_Oqs3pGDB_Dh5krRKeNG2NMaQRHCRxSw2kL7ZDFC_nUIUdtJFao35PWUV2b94YrN9DGB3IVu32/s1922/1000076178.webp"/>
+        </a>
+        <div class="card-content">
+          <h2 class="card-title">
+            <a href="how-to-type-enye-keyboard-pc-mobile.html">How To Type Enye Ñ or ñ in Keyboard | PC, Laptop, Mac, iPhone, Android And MS Word</a>
+          </h2>
+          <p class="card-desc">Need to type the Spanish letter Ñ on different gadgets? Learn active Alt codes, macOS shortcuts, MS Word tricks, and on-screen keyboard options.</p>
+          <a class="read-btn" href="how-to-type-enye-keyboard-pc-mobile.html">Read Full Guide</a>
         </div>
       </article>
     </div>
   </main>
 
-  <footer>
-    <div class='container'>
-      <div class='footer-links'>
-        <a href='/'>Home</a>
-        <a href='/about.html'>About us</a>
-        <a href='/privacy.html'>Privacy Policy</a>
-        <a href='/contact.html'>Contact us</a>
-      </div>
-      <div class='footer-copy'>
-        <p>Copyright 2026 Enye CopyPaste. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMobileMenu() {
-      var menu = document.getElementById('navMenu');
-      menu.classList.toggle('show');
-    }
-  </script>
 </body>
 </html>
