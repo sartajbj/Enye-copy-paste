@@ -1,96 +1,156 @@
-<div style="font-family: inherit; line-height: 1.8; margin: 0px auto; max-width: 100%; padding: 15px 0px;">
-
-    <p style="color: #111111; font-size: 1.15rem; font-weight: 500; margin-bottom: 20px;">
-        Trying to type the <strong>Capital Ñ (Big Enye)</strong> or the <strong>small ñ (lowercase)</strong> but your compact laptop or mechanical keyboard doesn't have a dedicated numeric keypad on the right side? 
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'/>
+  <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  <meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'/>
+  <meta content='index, follow' name='robots'/>
+  <title>How to Type Ñ on Keyboard Without Numpad (Laptop Guide)</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #2c3e50; line-height: 1.8; }
+    :root { --primary: #0066cc; --secondary: #00aa44; --border: #e0e0e0; --text: #333; }
+    .container { width: 100%; max-width: 850px; margin: 0 auto; padding: 0 20px; }
     
-    <div class="separator" style="clear: both; color: #333333; text-align: center; margin-bottom: 20px;">
-        <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHHnFvh8-4kCzJ4Q5mVK-Zc_ZUsK0dyROCUmu2WtSQGkKWTDTz3nkN2DfAm5HgTdjYneJTXiyIF9WRaEP5F1xtDzSS1JBvl7Z5nXluH8IwSkvI6EUfeOl2uZ3oVfZxkqvuSH4Higjnn46koc4YkHPculNkzfZNqjEUxLt8UEZCp4MyNMd6syejfKZVxf9J/s1408/1000076333.webp" style="margin-left: 1em; margin-right: 1em;">
-            <img alt="How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad" border="0" data-original-height="762" data-original-width="1408" height="173" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHHnFvh8-4kCzJ4Q5mVK-Zc_ZUsK0dyROCUmu2WtSQGkKWTDTz3nkN2DfAm5HgTdjYneJTXiyIF9WRaEP5F1xtDzSS1JBvl7Z5nXluH8IwSkvI6EUfeOl2uZ3oVfZxkqvuSH4Higjnn46koc4YkHPculNkzfZNqjEUxLt8UEZCp4MyNMd6syejfKZVxf9J/w320-h173/1000076333.webp" title="How to Type Capital Ñ (Big Enye) and Small ñ (Lowercase) Without a Numpad" width="320" />
-        </a>
+    /* Header */
+    header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .header-content { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 26px; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .logo-span { color: var(--secondary); }
+    .nav { display: flex; gap: 25px; align-items: center; }
+    .nav a { text-decoration: none; color: #666; font-weight: 500; font-size: 15px; }
+    .nav a:hover { color: var(--primary); }
+    
+    /* Post UX Layout */
+    .post-container { background: #fff; padding: 40px; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+    h1 { font-size: 34px; line-height: 1.3; color: #111; margin-bottom: 15px; font-weight: 800; }
+    
+    /* Meta Data */
+    .post-meta { display: flex; gap: 15px; font-size: 14px; color: #7f8c8d; margin-bottom: 25px; border-bottom: 1px solid #f1f1f1; padding-bottom: 15px; }
+    .meta-item { display: flex; align-items: center; gap: 5px; }
+    
+    /* Featured Image */
+    .featured-image-wrapper { width: 100%; border-radius: 8px; overflow: hidden; margin-bottom: 30px; border: 1px solid var(--border); }
+    .featured-image { width: 100%; height: auto; display: block; }
+    
+    /* Typography */
+    h2 { font-size: 24px; color: #111; margin: 35px 0 15px 0; border-bottom: 2px solid #f1f1f1; padding-bottom: 8px; font-weight: 700; }
+    h3 { font-size: 20px; color: var(--primary); margin: 25px 0 12px 0; font-weight: 700; }
+    p { margin-bottom: 20px; font-size: 16px; color: #444; }
+    
+    /* Code styling */
+    code { background: #f1f2f6; padding: 3px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 15px; color: #c0392b; font-weight: 600; }
+    
+    ul, ol { margin-left: 20px; margin-bottom: 25px; }
+    li { margin-bottom: 8px; font-size: 16px; color: #444; }
+    
+    .callout-box { background: #fffde7; border-left: 4px solid #f1c40f; padding: 20px; border-radius: 0 8px 8px 0; margin: 25px 0; }
+    .callout-box h4 { margin-bottom: 8px; font-size: 18px; color: #d35400; }
+    
+    .guide-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--border); margin: 20px 0; display: block; }
+
+    @media (max-width: 768px) {
+      .post-container { padding: 20px; }
+      h1 { font-size: 26px; }
+    }
+    
+    /* Footer */
+    footer { background: #fff; padding: 35px 0; margin-top: 50px; border-top: 1px solid var(--border); text-align: center; }
+    .footer-links { margin-bottom: 15px; display: flex; justify-content: center; gap: 20px; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-size: 14px; }
+    .footer-copy { color: #999; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class='container'>
+      <div class='header-content'>
+        <a class='logo' href='/'>Enye<span class='logo-span'>Ñ</span></a>
+        <nav class='nav'>
+          <a href='/'>Home</a>
+          <a href='/blog.html'>Blog</a>
+          <a href='/about.html'>About</a>
+          <a href='/privacy.html'>Privacy</a>
+          <a href='/contact.html'>Contact</a>
+        </nav>
+      </div>
     </div>
-    
-    <!--more-->
-    
-    <p style="color: #444444; font-size: 1.05rem; margin-bottom: 25px;">
-        Most standard keyboard tutorials tell you to hold the Alt key and type 164 or 165 on the number pad. However, if you are using a modern thin laptop, notebook, or a TKL mechanical keyboard, those Alt codes simply won't work. Don't worry—you don't need to change your hardware. This master guide will show you the easiest hidden shortcuts to type both the <strong>big Enye (Ñ)</strong> and <strong>small enye (ñ)</strong> variants without any physical numeric keypad.
-    </p>
+  </header>
 
-    <h2 style="border-bottom: 2px solid rgb(255, 153, 0); color: #111111; font-size: 1.4rem; margin-bottom: 20px; margin-top: 35px; padding-bottom: 6px;">Method 1: Use US-International Keyboard (The Fastest Way)</h2>
-    <p style="color: #333333; font-size: 1.02rem; margin-bottom: 15px;">
-        The absolute best way to type special characters on a compact laptop is by activating the <strong>United States-International keyboard layout</strong>. This layout converts your standard keys into dynamic accent creators.
-    </p>
-    
-    <div style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(238, 238, 238); color: #333333; margin-bottom: 25px; padding: 18px;">
-        <p style="color: #ff9900; font-size: 1.1rem; font-weight: bold; margin: 0px 0px 12px;">How to Activate it on Windows:</p>
-        <ol style="color: #444444; font-size: 0.98rem; margin: 0px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">Open Windows <strong>Settings</strong> (Press <kbd>Win + I</kbd>).</li>
-            <li style="margin-bottom: 8px;">Go to <strong>Time &amp; Language</strong> &gt; Click on <strong>Language &amp; Region</strong>.</li>
-            <li style="margin-bottom: 8px;">Click the three dots next to English (US) and select <strong>Language Options</strong>.</li>
-            <li style="margin-bottom: 8px;">Under Keyboards, click <strong>Add a keyboard</strong> and choose <strong>United States-International</strong>.</li>
-            <li style="margin-bottom: 0px;">Switch to this layout anytime by pressing <kbd>Windows Key + Spacebar</kbd>.</li>
+  <main class="container">
+    <article class="post-container">
+      <!-- Title -->
+      <h1>How to Type Ñ on Keyboard Without Numpad (Laptop Guide)</h1>
+      
+      <!-- Metadata -->
+      <div class="post-meta">
+        <div class="meta-item">📅 Published: July 13, 2026</div>
+        <div class="meta-item">👤 By: Editorial Team</div>
+        <div class="meta-item">🏷️ Category: Laptop Guides</div>
+      </div>
+
+      <!-- Featured Image (Second Thumbnail Image) -->
+      <div class="featured-image-wrapper">
+        <img class="featured-image" alt="How to Type Ñ without Numpad" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS6PO6zvPNcWpajzLApSdGYwSbrB1KoF_05LUiNDYnKA_bp_4DjiGyKSa-vgoXqOyfNqMJkcl9TlMdIctPuClA8uGDws5ghgIRWs_b9RxOkrAAVCG9btZsNxMy94h0GVzh3KZhubljnb_r-SwSxqU9EE94VJuIhpK-K8wPtD8TsVjVnX5z8AXB_-W7WD2D/s1408/1000076069.webp"/>
+      </div>
+
+      <!-- Content -->
+      <p>Trying to type the Capital <b>Ñ</b> (Big Enye) or the small <b>ñ</b> (lowercase) but your compact laptop or mechanical keyboard doesn't have a dedicated numeric keypad on the right side?</p>
+
+      <p>Most standard keyboard tutorials tell you to hold the Alt key and type 164 or 165 on the number pad. However, if you are using a modern thin laptop, notebook, or a TKL mechanical keyboard, those Alt codes simply won't work. Don't worry—you don't need to change your hardware. This master guide will show you the easiest hidden shortcuts to type both the big Enye (Ñ) and small enye (ñ) variants without any physical numeric keypad.</p>
+
+      <h2>Method 1: Use US-International Keyboard Layout (The Fastest Way)</h2>
+      <p>The absolute best way to type special characters on a compact laptop is by activating the <b>United States-International keyboard layout</b>. This layout converts your standard keys into dynamic accent creators.</p>
+
+      <div class="callout-box">
+        <h4>How to Activate it on Windows:</h4>
+        <ol>
+          <li>Open Windows Settings (Press <code>Win + I</code>).</li>
+          <li>Go to <b>Time &amp; Language</b> &gt; Click on <b>Language &amp; Region</b>.</li>
+          <li>Click the three dots next to English (US) and select <b>Language Options</b>.</li>
+          <li>Under Keyboards, click <b>Add a keyboard</b> and choose <b>United States-International</b>.</li>
+          <li>Switch to this layout anytime by pressing <code>Windows Key + Spacebar</code>.</li>
         </ol>
+      </div>
+
+      <h3>To Type Small ñ (Lowercase Enye):</h3>
+      <p>Press the <code>Right Alt Key + N</code> simultaneously on your keyboard.</p>
+
+      <h3>To Type Capital Ñ (Big Enye):</h3>
+      <p>Press <code>Right Alt Key + Shift + N</code> at the same time to render the uppercase character instantly.</p>
+
+      <h2>Method 2: Use Windows Virtual On-Screen Keyboard</h2>
+      <p>If you don't want to change your system's layout profiles, you can easily use the built-in virtual touch keyboard:</p>
+      <ul>
+        <li>Right-click your Windows taskbar and select <b>"Show touch keyboard button"</b>.</li>
+        <li>Click the digital keyboard icon in your system tray to display the visual keyboard.</li>
+        <li>Click and hold down the standard <b>n key</b>.</li>
+        <li>A tiny sub-menu bubble layer will pop up. Select <b>ñ</b>. To type the big Enye (Ñ), press the <b>Shift key</b> on the touch layout first, then hold down N.</li>
+      </ul>
+
+      <h2>Method 3: Copy via Windows Character Map Utility</h2>
+      <p>Windows provides a library utility called Character Map that holds every single diacritical mark:</p>
+      <ul>
+        <li>Press <code>Win + R</code> to open the Run box.</li>
+        <li>Type <code>charmap</code> and hit Enter.</li>
+        <li>Locate the Enye characters.</li>
+        <li>Double-click on the <b>Capital Ñ</b> or <b>small ñ</b>, click 'Copy', and paste it directly into your document.</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer>
+    <div class='container'>
+      <div class='footer-links'>
+        <a href='/'>Home</a>
+        <a href='/about.html'>About us</a>
+        <a href='/privacy.html'>Privacy Policy</a>
+        <a href='/contact.html'>Contact us</a>
+      </div>
+      <div class='footer-copy'>
+        <p>Copyright 2026 Enye CopyPaste. All rights reserved.</p>
+      </div>
     </div>
-
-    <div style="background: rgb(255, 253, 245); border-left: 4px solid rgb(255, 153, 0); border-radius: 6px; color: #333333; margin-bottom: 20px; padding: 15px;">
-        <strong style="color: #111111; display: block; font-size: 1.05rem; margin-bottom: 5px;">To Type Small ñ (Lowercase Enye):</strong>
-        <span style="color: #333333; font-size: 0.98rem;">Press the <strong>Right Alt Key + N</strong> simultaneously on your keyboard.</span>
-    </div>
-
-    <div style="background: rgb(255, 253, 245); border-left: 4px solid rgb(255, 153, 0); border-radius: 6px; color: #333333; margin-bottom: 25px; padding: 15px;">
-        <strong style="color: #111111; display: block; font-size: 1.05rem; margin-bottom: 5px;">To Type Capital Ñ (Big Enye):</strong>
-        <span style="color: #333333; font-size: 0.98rem;">Press <strong>Right Alt Key + Shift + N</strong> at the same time to render the uppercase character instantly.</span>
-    </div>
-
-    <h2 style="border-bottom: 2px solid rgb(255, 153, 0); color: #111111; font-size: 1.4rem; margin-bottom: 20px; margin-top: 35px; padding-bottom: 6px;">Method 2: Use Windows Virtual On-Screen Keyboard</h2>
-    <p style="color: #333333; font-size: 1.02rem; margin-bottom: 15px;">
-        If you don't want to change your system's layout profiles, you can easily use the built-in virtual touch keyboard:
-    </p>
-    
-    <ul style="color: #444444; font-size: 1rem; margin-bottom: 25px; padding-left: 20px;">
-        <li style="margin-bottom: 8px;">Right-click your Windows taskbar and select <strong>"Show touch keyboard button"</strong>.</li>
-        <li style="margin-bottom: 8px;">Click the digital keyboard icon in your system tray to display the visual keyboard.</li>
-        <li style="margin-bottom: 8px;">Click and hold down the standard <strong>n key</strong>.</li>
-        <li style="margin-bottom: 0px;">A tiny sub-menu bubble layer will pop up. Select <strong>ñ</strong>. To type the <strong>big Enye (Ñ)</strong>, press the <strong>Shift key</strong> on the touch layout first, then hold down <strong>N</strong>.</li>
-    </ul>
-    
-    <p style="color: #444444; font-size: 1.05rem; margin-bottom: 25px;">
-        To see other methods and mobile shortcuts, check out our master guide: <b><a href="https://www.enyecopypaste.com/2026/07/how-to-type-enye-keyboard-pc-mobile.html">How To Type Ñ Windows &amp; Laptop</a></b>.
-    </p>
-
-    <h2 style="border-bottom: 2px solid rgb(255, 153, 0); color: #111111; font-size: 1.4rem; margin-bottom: 20px; margin-top: 35px; padding-bottom: 6px;">Method 3: Copy via Windows Character Map Utility</h2>
-    <p style="color: #333333; font-size: 1.02rem; margin-bottom: 15px;">
-        Windows provides a library utility called Character Map that holds every single diacritical mark:
-    </p>
-
-    <div style="background: rgb(250, 250, 250); border-radius: 8px; border: 1px solid rgb(238, 238, 238); color: #333333; margin-bottom: 25px; padding: 15px;">
-        <ul style="color: #444444; font-size: 0.98rem; margin: 0px; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">Press <kbd>Win + R</kbd> to open the Run box.</li>
-            <li style="margin-bottom: 8px;">Type <strong>charmap</strong> and hit Enter.</li>
-            <li style="margin-bottom: 8px;">Locate the Enye characters.</li>
-            <li style="margin-bottom: 0px;">Double-click on the <strong>Capital Ñ</strong> or <strong>small ñ</strong>, click 'Copy', and paste it directly into your document.</li>
-        </ul>
-    </div>
-
-    <h2 style="border-bottom: 2px solid rgb(255, 153, 0); color: #111111; font-size: 1.4rem; margin-bottom: 20px; margin-top: 35px; padding-bottom: 6px;">Frequently Asked Questions (FAQs)</h2>
-    
-    <div style="color: #333333; margin-bottom: 18px;">
-        <p style="color: #111111; font-size: 1.05rem; font-weight: bold; margin-bottom: 4px;">Q: Why doesn't Alt + 164 work on my laptop keys?</p>
-        <p style="color: #444444; font-size: 0.98rem; margin: 0px;">A: Standard Alt codes require numeric signals generated exclusively by a dedicated physical numeric keypad row on the right side of the keyboard. The standard number row above the letters will not trigger it.</p>
-    </div>
-
-    <div style="color: #333333; margin-bottom: 18px;">
-        <p style="color: #111111; font-size: 1.05rem; font-weight: bold; margin-bottom: 4px;">Q: Does MS Word have a special shortcut for laptops without numpads?</p>
-        <p style="color: #444444; font-size: 0.98rem; margin: 0px;">A: Yes! Inside Word, you can press <kbd>Ctrl + Shift + ~</kbd> simultaneously, release, and then type <kbd>n</kbd> for small enye, or <kbd>N</kbd> for the big Enye character.</p>
-    </div>
-
-    <h2 style="border-bottom: 2px solid rgb(255, 153, 0); color: #111111; font-size: 1.4rem; margin-bottom: 20px; margin-top: 35px; padding-bottom: 6px;">Conclusion</h2>
-    <p style="color: #444444; font-size: 1.05rem; margin-bottom: 15px;">
-        Not having a full-sized keyboard shouldn't slow you down. By using the US-International layout, utilizing the local virtual touch layer, or taking advantage of Word shortcuts, typing both the <strong>Capital Ñ (Big Enye)</strong> and <strong>small ñ (lowercase)</strong> is simple and stress-free.
-    </p>
-    <p style="color: #444444; font-size: 1.05rem; margin-bottom: 20px;">
-        Bookmark our homepage <b><a href="https://www.enyecopypaste.com/">Enye copy paste</a></b> solution tool so you never lose track of these laptop shortcuts, or simply use our dedicated 1-click web platform to fetch special diacritical symbols whenever you need them!
-    </p>
-    <p style="color: #444444; font-size: 1.05rem; margin-bottom: 20px;">We created this <b><a href="https://www.enyecopypaste.com/">Enye copy paste tool</a></b> to make life easier by giving you fast, 1-click copying options for every device.</p>
-
-</div>
+  </footer>
+</body>
+</html>
