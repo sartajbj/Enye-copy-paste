@@ -133,6 +133,24 @@ header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--borde
   .device-guide-block h3 { font-size: 18px; }
 }
 
+/* Dynamic Blog Section Styles */
+.blog-section { margin: 40px auto; }
+.blog-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; margin-top: 25px; }
+.blog-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid var(--border); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+.blog-card-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid var(--border); }
+.blog-card-content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+.blog-card-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 10px; text-decoration: none; line-height: 1.4; transition: color 0.3s; }
+.blog-card-title:hover { color: var(--primary); }
+.blog-card-excerpt { font-size: 14px; color: #666; margin-bottom: 20px; line-height: 1.6; flex-grow: 1; }
+.blog-card-btn { align-self: flex-start; background: var(--primary); color: #fff; text-decoration: none; padding: 8px 18px; border-radius: 6px; font-size: 14px; font-weight: 600; transition: background 0.3s; }
+.blog-card-btn:hover { background: #0055aa; }
+
+@media(max-width: 768px) {
+  .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+  .blog-card-img { height: 180px; }
+}
+
 /* FAQ Layout */
 .faq-item { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
 .faq-item:last-child { border-bottom: 0; padding-bottom: 0; margin-bottom: 0; }
@@ -205,7 +223,7 @@ footer { background: #fff; padding: 35px 0; margin-top: 25px; border-top: 1px so
       <p class='howto-intro' style='text-align: center;'>Can't find the Enye letter on your keyboard? Follow these simple step-by-step methods to type both uppercase <b>Ñ</b> and lowercase <b>ñ</b> quickly across Windows, Mac, Android, and iOS setups.</p>
       
       <div class='device-guide-block'>
-        <h3>How to Type Ñ on Windows PC &Laptop</h3>
+        <h3>How to Type Ñ on Windows PC &amp; Laptop</h3>
         <p>On Windows systems, the easiest way to Type the Enye character is by utilizing Alt keyboard codes. Make sure your Num Lock is active before execution.</p>
         <ul class='howto-step-list'>
           <li><b>For Capital Ñ:</b> Hold the <code>Alt</code> key and type <code>165</code> or <code>0209</code> on your dedicated numeric keypad.</li>
@@ -225,7 +243,7 @@ footer { background: #fff; padding: 35px 0; margin-top: 25px; border-top: 1px so
       </div>
 
       <div class='device-guide-block'>
-        <h3>iPhone & iPad (iOS)</h3>
+        <h3>iPhone &amp; iPad (iOS)</h3>
         <p>Mobile virtual layouts handle accented text entries natively via continuous surface gestures without adding configuration components.</p>
         <ul class='howto-step-list'>
           <li>Open your app and tap the input text space to pull up the system layout.</li>
@@ -266,6 +284,34 @@ footer { background: #fff; padding: 35px 0; margin-top: 25px; border-top: 1px so
           Can't Type Enye big or Enye small with shortcut on your laptop? Discover the easiest shortcuts to type both uppercase Ñ and lowercase ñ characters without any problem on number pad layout you can check our Copy paste enye tool or details guides.
       </p>
   </div>
+
+  <!-- NEW PREMIUM BLOG SECTION (HOMEPAGE CARDS PREVIEW) -->
+  <section class='container blog-section'>
+    <h2 class='section-title' style='text-align: center; margin-bottom: 10px;'>Latest Guides &amp; Tips</h2>
+    <p style='text-align: center; color: #666; font-size: 15px; margin-bottom: 30px;'>Expand your knowledge on typing and using special enye characters easily.</p>
+    
+    <div class='blog-grid'>
+      <!-- Card 1 -->
+      <article class='blog-card'>
+        <img class='blog-card-img' alt='How to Type Enye on Keyboard PC and Mobile' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh5anU-24IEKDe4FKtQro_Qn6_7LcSwtCNPbzRraU3GPAGtU1egYvkxYresMpc3H0LN4JUN187ukvPg2HYm7hAOOf6yojRsZ6utk0gDjzGsZhhMjssC7PepEYTWuqEfSqY2dTlPmDutDnzG5RB3jF_6lhWNYdHwENgYB0LD0DQJebF0SfW82gZCoTIH03Nd/s1408/1000076068.webp' loading='lazy'/>
+        <div class='blog-card-content'>
+          <a class='blog-card-title' href='how-to-type-enye-keyboard-pc-mobile.html'>How to Type Enye (Ñ or ñ) on Keyboard: PC, Laptop &amp; Mobile</a>
+          <p class='blog-card-excerpt'>Learn the fastest keyboard shortcuts and hidden tricks to type the Spanish Enye character on Windows, macOS, Android, and iOS devices effortlessly.</p>
+          <a class='blog-card-btn' href='how-to-type-enye-keyboard-pc-mobile.html'>Read Full Guide</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class='blog-card'>
+        <img class='blog-card-img' alt='How to Type Ñ without Numpad' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgS6PO6zvPNcWpajzLApSdGYwSbrB1KoF_05LUiNDYnKA_bp_4DjiGyKSa-vgoXqOyfNqMJkcl9TlMdIctPuClA8uGDws5ghgIRWs_b9RxOkrAAVCG9btZsNxMy94h0GVzh3KZhubljnb_r-SwSxqU9EE94VJuIhpK-K8wPtD8TsVjVnX5z8AXB_-W7WD2D/s1408/1000076069.webp' loading='lazy'/>
+        <div class='blog-card-content'>
+          <a class='blog-card-title' href='how-to-type-enye-without-numpad.html'>How to Type Ñ on Keyboard Without Numpad (Laptop Guide)</a>
+          <p class='blog-card-excerpt'>Don't have a numeric keypad on your laptop? Discover easy alternative tricks, shortcuts, and mapping methods to type capital Ñ and small ñ instantly.</p>
+          <a class='blog-card-btn' href='how-to-type-enye-without-numpad.html'>Read Full Guide</a>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <!-- HISTORY SECTION -->
   <section class='container' style='margin: 20px auto;'>
