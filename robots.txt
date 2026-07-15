@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.enyecopypaste.com/sitemap.xml
+Sitemap: https://enyecopypaste.com/sitemap.xml
