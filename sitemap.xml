@@ -5,31 +5,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/about.html</loc>
+    <loc>https://enyecopypaste.com/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/blog.html</loc>
+    <loc>https://enyecopypaste.com/blog</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/contact.html</loc>
+    <loc>https://enyecopypaste.com/contact</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/privacy.html</loc>
+    <loc>https://enyecopypaste.com/privacy</loc>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/how-to-type-enye-keyboard-pc-mobile.html</loc>
+    <loc>https://enyecopypaste.com/how-to-type-enye-keyboard-pc-mobile</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/how-to-type-enye-on-windows-10-11.html</loc>
+    <loc>https://enyecopypaste.com/how-to-type-enye-on-windows-10-11</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://enyecopypaste.com/how-to-type-enye-without-numpad.html</loc>
+    <loc>https://enyecopypaste.com/how-to-type-enye-without-numpad</loc>
     <priority>0.8</priority>
   </url>
 </urlset>
