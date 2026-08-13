@@ -1,35 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://enyecopypaste.com/</loc>
-    <priority>1.0</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/about</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/blog</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/contact</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/privacy</loc>
-    <priority>0.5</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/how-to-type-enye-keyboard-pc-mobile</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/how-to-type-enye-on-windows-10-11</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
   <url>
     <loc>https://enyecopypaste.com/how-to-type-enye-without-numpad</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-08-13</lastmod>
   </url>
+
 </urlset>
