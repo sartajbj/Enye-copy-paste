@@ -766,13 +766,13 @@
       line-height: 1.75;
     }
 
-        /* =========================
-       FOOTER
+    /* =========================
+       FOOTER (SINGLE LINE FOR MOBILE)
     ========================= */
 
     footer {
       margin-top: 35px;
-      padding: 32px 20px;
+      padding: 32px 10px; /* Padding kam ki taake mobile screen width poori mile */
       background: #fff;
       border-top: 1px solid var(--border);
       text-align: center;
@@ -782,17 +782,18 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 12px 20px; /* Horizontal space 20px aur vertical gap 12px rakha hai */
+      flex-wrap: nowrap; /* Is se line flexible wrapping band ho jayegi */
+      gap: 10px; /* Spacing 10px ki taake ek hi line me fit aayein */
       margin-bottom: 16px;
+      overflow-x: auto; /* Agar screen bohot chhoti ho tab bhi line na toote */
     }
 
     .footer-links a {
       color: var(--blue);
       text-decoration: none;
-      font-size: 14px; /* Slightly bigger & readable on mobile */
+      font-size: 12px; /* Font size thoda adjust kiya for single line fit */
       font-weight: 600;
-      padding: 2px 4px; /* Touch target area behtar hota hai */
+      white-space: nowrap; /* Words ko break hone se rokta hai */
     }
 
     .footer-links a:hover {
@@ -804,6 +805,7 @@
       font-size: 12px;
       line-height: 1.6;
     }
+
 
 
     /* =========================
