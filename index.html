@@ -722,7 +722,7 @@
       transform: rotate(180deg);
     }
 
-    =========================
+        /* =========================
        FOUNDER
     ========================= */
 
@@ -730,18 +730,20 @@
       text-align: center;
     }
 
-    .founder-badge {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 10px;
-      border-radius: 50%;
-      background: var(--blue-light);
-      color: var(--blue);
+    /* Founder Photo ko Gol (Round) aur Center Karne Ke Liye */
+    .founder-photo {
+      margin: 0 auto 12px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      font-size: 27px;
-      font-weight: 800;
+    }
+
+    .founder-photo img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%; /* Image ko perfectly round karega */
+      object-fit: cover;  /* Picture ko stretch hone se bachaye ga */
+      border: 3px solid var(--blue); /* Professional blue border */
+      display: block;
     }
 
     .founder h2 {
@@ -763,8 +765,6 @@
       font-size: 14px;
       line-height: 1.75;
     }
-
-    /* =========================
 
     /* =========================
        FOOTER
