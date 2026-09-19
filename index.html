@@ -442,7 +442,7 @@
     }
 
     /* =========================
-       QUICK ANSWERS
+       SECTIONS / CARDS
     ========================= */
 
     .section {
@@ -472,44 +472,12 @@
       font-size: 15px;
     }
 
-    .answer-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 15px;
-    }
-
-    .answer-box {
-      background: #fbfcfe;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 19px;
-    }
-
-    .answer-box h3 {
+    .section-intro a {
       color: var(--blue);
-      font-size: 17px;
-      margin-bottom: 7px;
-    }
-
-    .answer-box p {
-      color: #4f5b6b;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .answer-box code {
-      background: #eef3f8;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-size: 13px;
-      color: #253247;
+      font-weight: 700;
     }
 
     @media (max-width: 700px) {
-      .answer-grid {
-        grid-template-columns: 1fr;
-      }
-
       .section-heading {
         font-size: 23px;
       }
@@ -733,7 +701,7 @@
       transform: rotate(180deg);
     }
 
-        /* =========================
+    /* =========================
        FOUNDER
     ========================= */
 
@@ -741,7 +709,6 @@
       text-align: center;
     }
 
-    /* Founder Photo ko Gol (Round) aur Center Karne Ke Liye */
     .founder-photo {
       margin: 0 auto 12px;
       display: flex;
@@ -751,9 +718,9 @@
     .founder-photo img {
       width: 90px;
       height: 90px;
-      border-radius: 50%; /* Image ko perfectly round karega */
-      object-fit: cover;  /* Picture ko stretch hone se bachaye ga */
-      border: 3px solid var(--blue); /* Professional blue border */
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--blue);
       display: block;
     }
 
@@ -778,12 +745,13 @@
     }
 
     /* =========================
-       FOOTER (SINGLE LINE FOR MOBILE)
+       FOOTER
+       (links now wrap on small screens instead of being cut off)
     ========================= */
 
     footer {
       margin-top: 35px;
-      padding: 32px 10px; /* Padding kam ki taake mobile screen width poori mile */
+      padding: 32px 10px;
       background: #fff;
       border-top: 1px solid var(--border);
       text-align: center;
@@ -793,18 +761,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: nowrap; /* Is se line flexible wrapping band ho jayegi */
-      gap: 10px; /* Spacing 10px ki taake ek hi line me fit aayein */
+      flex-wrap: wrap;
+      gap: 8px 16px;
       margin-bottom: 16px;
-      overflow-x: auto; /* Agar screen bohot chhoti ho tab bhi line na toote */
     }
 
     .footer-links a {
       color: var(--blue);
       text-decoration: none;
-      font-size: 12px; /* Font size thoda adjust kiya for single line fit */
+      font-size: 13px;
       font-weight: 600;
-      white-space: nowrap; /* Words ko break hone se rokta hai */
+      white-space: nowrap;
     }
 
     .footer-links a:hover {
@@ -816,8 +783,6 @@
       font-size: 12px;
       line-height: 1.6;
     }
-
-
 
     /* =========================
        ACCESSIBILITY
@@ -869,11 +834,11 @@
   </header>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
-
   <main>
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <section class="hero">
       <h1>Enye Copy Paste: Copy Ñ or ñ Instantly</h1>
@@ -909,14 +874,14 @@
         </div>
 
         <p class="tool-subtitle">
-  Copy Enye big (Ñ), Enye small (ñ), or both together with one click.
-</p>
+          Copy Enye big (Ñ), Enye small (ñ), or both together with one click.
+        </p>
 
-<div class="copy-buttons">
-  <button class="copy-btn" type="button" onclick="copyText('Ñ', this, 'Ñ copied!')">Copy Ñ (Big)</button>
-  <button class="copy-btn" type="button" onclick="copyText('ñ', this, 'ñ copied!')">Copy ñ (Small)</button>
-  <button class="copy-btn" type="button" onclick="copyText('Ññ', this, 'Ññ copied!')">Copy Ññ</button>
-</div>
+        <div class="copy-buttons">
+          <button class="copy-btn" type="button" onclick="copyText('Ñ', this, 'Ñ copied!')">Copy Ñ (Big)</button>
+          <button class="copy-btn" type="button" onclick="copyText('ñ', this, 'ñ copied!')">Copy ñ (Small)</button>
+          <button class="copy-btn" type="button" onclick="copyText('Ññ', this, 'Ññ copied!')">Copy Ññ</button>
+        </div>
 
         <div class="copy-status" id="copyStatus" aria-live="polite"></div>
 
@@ -926,42 +891,65 @@
 
 
     <!-- =========================
-         QUICK ANSWER
+         ENYE BIG & SMALL: NAMES AND WORDS
     ========================= -->
 
     <section class="container section">
-  <div class="card">
-    <h2 class="section-heading">Enye Big &amp; Enye Small: Copy Names and Words</h2>
-    <p class="section-intro">
-      Need Ñ inside a name or word? Copy it ready-made. For typing methods on each device, see our
-      <a href="/how-to-type-enye-keyboard-pc-mobile">keyboard guide</a>.
-    </p>
 
-    <div class="info-grid">
+      <div class="card">
 
-      <div class="info-box">
-        <h3>Enye Big (Ñ) in capital words</h3>
-        <div class="info-row"><span class="info-value">ESPAÑA</span>
-          <button class="small-copy" type="button" onclick="copyText('ESPAÑA', this, 'ESPAÑA copied!')">Copy</button></div>
-        <div class="info-row"><span class="info-value">NIÑO</span>
-          <button class="small-copy" type="button" onclick="copyText('NIÑO', this, 'NIÑO copied!')">Copy</button></div>
-        <div class="info-row"><span class="info-value">PEÑA</span>
-          <button class="small-copy" type="button" onclick="copyText('PEÑA', this, 'PEÑA copied!')">Copy</button></div>
+        <h2 class="section-heading">Enye Big &amp; Enye Small: Copy Names and Words</h2>
+
+        <p class="section-intro">
+          Need Ñ inside a name or word? Copy it ready-made. For typing methods on each device, see our
+          <a href="/how-to-type-enye-keyboard-pc-mobile">keyboard guide</a>.
+        </p>
+
+        <div class="info-grid">
+
+          <div class="info-box">
+            <h3>Enye Big (Ñ) in capital words</h3>
+
+            <div class="info-row">
+              <span class="info-value">ESPAÑA</span>
+              <button class="small-copy" type="button" onclick="copyText('ESPAÑA', this, 'ESPAÑA copied!')">Copy</button>
+            </div>
+
+            <div class="info-row">
+              <span class="info-value">NIÑO</span>
+              <button class="small-copy" type="button" onclick="copyText('NIÑO', this, 'NIÑO copied!')">Copy</button>
+            </div>
+
+            <div class="info-row">
+              <span class="info-value">PEÑA</span>
+              <button class="small-copy" type="button" onclick="copyText('PEÑA', this, 'PEÑA copied!')">Copy</button>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <h3>Enye Small (ñ) in words and names</h3>
+
+            <div class="info-row">
+              <span class="info-value">Niño</span>
+              <button class="small-copy" type="button" onclick="copyText('Niño', this, 'Niño copied!')">Copy</button>
+            </div>
+
+            <div class="info-row">
+              <span class="info-value">Peña</span>
+              <button class="small-copy" type="button" onclick="copyText('Peña', this, 'Peña copied!')">Copy</button>
+            </div>
+
+            <div class="info-row">
+              <span class="info-value">mañana</span>
+              <button class="small-copy" type="button" onclick="copyText('mañana', this, 'mañana copied!')">Copy</button>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="info-box">
-        <h3>Enye Small (ñ) in words and names</h3>
-        <div class="info-row"><span class="info-value">Niño</span>
-          <button class="small-copy" type="button" onclick="copyText('Niño', this, 'Niño copied!')">Copy</button></div>
-        <div class="info-row"><span class="info-value">Peña</span>
-          <button class="small-copy" type="button" onclick="copyText('Peña', this, 'Peña copied!')">Copy</button></div>
-        <div class="info-row"><span class="info-value">mañana</span>
-          <button class="small-copy" type="button" onclick="copyText('mañana', this, 'mañana copied!')">Copy</button></div>
-      </div>
-
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- =========================
@@ -988,59 +976,23 @@
             <h3>Windows Alt Codes</h3>
 
             <div class="info-row">
-              <span class="info-value">
-                Alt + 164 — ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('Alt + 164', this, 'Alt + 164 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">Alt + 164 — ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('Alt + 164', this, 'Alt + 164 copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                Alt + 0241 — ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('Alt + 0241', this, 'Alt + 0241 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">Alt + 0241 — ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('Alt + 0241', this, 'Alt + 0241 copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                Alt + 165 — Ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('Alt + 165', this, 'Alt + 165 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">Alt + 165 — Ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('Alt + 165', this, 'Alt + 165 copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                Alt + 0209 — Ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('Alt + 0209', this, 'Alt + 0209 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">Alt + 0209 — Ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('Alt + 0209', this, 'Alt + 0209 copied!')">Copy</button>
             </div>
 
           </div>
@@ -1051,59 +1003,23 @@
             <h3>Unicode Values</h3>
 
             <div class="info-row">
-              <span class="info-value">
-                U+00F1 — ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('U+00F1', this, 'U+00F1 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">U+00F1 — ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('U+00F1', this, 'U+00F1 copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                U+00D1 — Ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('U+00D1', this, 'U+00D1 copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">U+00D1 — Ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('U+00D1', this, 'U+00D1 copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                HTML: &amp;ntilde; — ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('&ntilde;', this, 'HTML code copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">HTML: &amp;ntilde; — ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('&ntilde;', this, 'HTML code copied!')">Copy</button>
             </div>
 
             <div class="info-row">
-              <span class="info-value">
-                HTML: &amp;Ntilde; — Ñ
-              </span>
-
-              <button
-                class="small-copy"
-                type="button"
-                onclick="copyText('&Ntilde;', this, 'HTML code copied!')"
-              >
-                Copy
-              </button>
+              <span class="info-value">HTML: &amp;Ntilde; — Ñ</span>
+              <button class="small-copy" type="button" onclick="copyText('&Ntilde;', this, 'HTML code copied!')">Copy</button>
             </div>
 
           </div>
@@ -1179,17 +1095,6 @@
 
 
     <!-- =========================
-         EXISTING 3 GUIDES
-    ========================= -->
-
-    <section class="container section">
-
-      <div class="card">
-
-        <h2 class="section-heading">
-          Detailed Enye Typing Guides
-        </h2>
-    <!-- =========================
          DETAILED GUIDES
     ========================= -->
 
@@ -1220,7 +1125,7 @@
               laptop, Mac, Android, and iPhone keyboards.
             </p>
 
-            
+            <a
               class="guide-link"
               href="/how-to-type-enye-keyboard-pc-mobile"
             >
@@ -1243,7 +1148,7 @@
               for typing both uppercase Ñ and lowercase ñ.
             </p>
 
-            
+            <a
               class="guide-link"
               href="/how-to-type-enye-without-numpad"
             >
@@ -1266,7 +1171,7 @@
               methods for typing Ñ and ñ on Windows computers.
             </p>
 
-            
+            <a
               class="guide-link"
               href="/how-to-type-enye-on-windows-10-11"
             >
@@ -1289,7 +1194,7 @@
               using our free online Spanish keyboard.
             </p>
 
-            
+            <a
               class="guide-link"
               href="/spanish-keyboard"
             >
@@ -1482,59 +1387,63 @@
       </div>
 
     </section>
-<!-- =========================
-     FOUNDER / TOOL CREATOR (WITH SCHEMA)
-========================= -->
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Sartaj Khan",
-  "jobTitle": "Web Developer & Tool Creator",
-  "worksFor": {
-    "@type": "WebApplication",
-    "name": "Enye Copy Paste",
-    "url": "https://enyecopypaste.com/"
-  },
-  "url": "https://enyecopypaste.com/about",
-  "sameAs": [
-    "https://enyecopypaste.com/"
-  ]
-}
-</script>
 
-<section class="container section">
+    <!-- =========================
+         FOUNDER / TOOL CREATOR (WITH SCHEMA)
+    ========================= -->
 
-  <div class="card founder" style="text-align: center;">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sartaj Khan",
+      "jobTitle": "Web Developer & Tool Creator",
+      "worksFor": {
+        "@type": "WebApplication",
+        "name": "Enye Copy Paste",
+        "url": "https://enyecopypaste.com/"
+      },
+      "url": "https://enyecopypaste.com/about",
+      "sameAs": [
+        "https://enyecopypaste.com/"
+      ]
+    }
+    </script>
 
-    <div class="founder-photo" style="margin: 0 auto 15px auto;">
-      <img
-        src="/Sartaj%20khan.webp"
-        alt="Sartaj Khan, Web Developer and Tool Creator"
-        width="90"
-        height="90"
-        loading="lazy"
-        style="border-radius: 50%; object-fit: cover; display: block; margin: 0 auto; border: 3px solid #2563eb;"
-      >
-    </div>
+    <section class="container section">
 
-    <h2>Sartaj Khan</h2>
+      <div class="card founder" style="text-align: center;">
 
-    <div class="founder-role" style="margin-bottom: 12px; font-weight: 600; color: #2563eb;">
-      Web Developer &amp; Tool Creator
-    </div>
+        <div class="founder-photo" style="margin: 0 auto 15px auto;">
+          <img
+            src="/Sartaj%20khan.webp"
+            alt="Sartaj Khan, Web Developer and Tool Creator"
+            width="90"
+            height="90"
+            loading="lazy"
+            style="border-radius: 50%; object-fit: cover; display: block; margin: 0 auto; border: 3px solid #2563eb;"
+          >
+        </div>
 
-    <p style="text-align: center; max-width: 500px; margin: 0 auto;">
-      Sartaj Khan is a web developer and tool creator who builds simple,
-      useful online tools to solve real user problems and save time.
-      He created Enye CopyPaste to make copying and typing Ñ and ñ quick
-      and easy across different devices.
-    </p>
+        <h2>Sartaj Khan</h2>
 
-  </div>
+        <div class="founder-role" style="margin-bottom: 12px; font-weight: 600; color: #2563eb;">
+          Web Developer &amp; Tool Creator
+        </div>
 
-</section>
+        <p style="text-align: center; max-width: 500px; margin: 0 auto;">
+          Sartaj Khan is a web developer and tool creator who builds simple,
+          useful online tools to solve real user problems and save time.
+          He created Enye CopyPaste to make copying and typing Ñ and ñ quick
+          and easy across different devices.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
 
 
   <!-- =========================
