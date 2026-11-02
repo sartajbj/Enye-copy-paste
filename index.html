@@ -43,7 +43,7 @@
 <meta property="og:image:alt" content="How to Type Ñ, ñ or Enye">
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Enye Copy Paste – Copy Ñ &amp; ñ Instantly">
   <meta
     name="twitter:description"
@@ -57,7 +57,7 @@
     "@type": "WebApplication",
     "name": "Enye Copy Paste",
     "url": "https://enyecopypaste.com/",
-    "description": "Free online tool for copying the Spanish letter Ñ and lowercase ñ.",
+    "description": "Free online tool to copy Ñ and ñ, edit text with the enye character, and learn how to type it on desktop and mobile devices.",
     "applicationCategory": "UtilityApplication",
     "operatingSystem": "Any",
     "browserRequirements": "Requires JavaScript and a modern web browser",
@@ -183,6 +183,32 @@
       max-width: 1040px;
       margin: 0 auto;
       padding: 0 20px;
+    }
+
+    .editor-steps {
+      margin: 12px 0 4px 22px;
+      padding: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .editor-steps li {
+      padding-left: 4px;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 600px) {
+      .editor-meta {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .editor-buttons .copy-btn,
+      .editor-buttons .editor-clear {
+        flex: 1 1 100%;
+        min-height: 44px;
+      }
     }
 
     .editor-label {
@@ -906,9 +932,9 @@
       <h1>Enye Copy Paste: Copy Ñ or ñ Instantly</h1>
 
       <p>
-        Copy the Spanish letter Enye with one click, or learn how to type
-        <strong>Ñ</strong> and <strong>ñ</strong> on Windows, Mac, Android,
-        iPhone, and other devices.
+        Copy the letter <strong>Ñ</strong> or <strong>ñ</strong>, add it to
+        your own text, or find the right typing method for Windows, Mac,
+        iPhone, Android, and other devices.
       </p>
 
       <div class="hero-note">
@@ -936,7 +962,8 @@
         </div>
 
         <p class="tool-subtitle">
-          Copy Enye big (Ñ), Enye small (ñ), or both together with one click.
+          Choose the exact character you need. It is copied ready to paste into a name,
+          message, document, search box, or form.
         </p>
 
         <div class="copy-buttons">
@@ -1020,10 +1047,15 @@
 
     <section class="container section" aria-labelledby="text-editor-heading">
       <div class="card">
-        <h2 class="section-heading" id="text-editor-heading">Add Ñ or ñ to Your Text</h2>
+        <h2 class="section-heading" id="text-editor-heading">Add Ñ or ñ Anywhere in Your Text</h2>
         <p class="section-intro">
-          Writing a name, message, or form entry? Place your cursor where the enye belongs, insert the correct character, then copy the finished text. This editor does not automatically replace ordinary n letters.
+          Build or correct a name, word, or sentence without retyping it. This small editor inserts the character exactly where you choose and never changes ordinary N or n automatically.
         </p>
+        <ol class="editor-steps">
+          <li><strong>Type or paste</strong> your text in the box.</li>
+          <li><strong>Tap inside the text</strong> where Ñ or ñ should go. Select a letter first if you want to replace it.</li>
+          <li><strong>Choose Insert Ñ or Insert ñ</strong>, then tap Copy finished text.</li>
+        </ol>
 
         <label for="enyeTextEditor" class="editor-label">Your text</label>
         <textarea
@@ -1031,20 +1063,20 @@
           class="enye-editor"
           rows="4"
           maxlength="2000"
-          placeholder="Example: Iñigo, Peñafrancia, or your own text"
+          placeholder="Type or paste text here. Example: manana"
           aria-describedby="editor-help editor-count"
         ></textarea>
         <div class="editor-meta">
-          <span id="editor-help">Tap or place the cursor in your text before inserting Ñ or ñ.</span>
-          <span id="editor-count" aria-live="polite">0 / 2000</span>
+          <span id="editor-help">Tap where the character belongs, or select a letter to replace it.</span>
+          <span id="editor-count" aria-live="polite">0 / 2000 characters</span>
         </div>
         <div class="editor-buttons">
-          <button class="copy-btn" type="button" onclick="insertEnyeAtCursor('Ñ')">Insert Ñ</button>
-          <button class="copy-btn" type="button" onclick="insertEnyeAtCursor('ñ')">Insert ñ</button>
-          <button class="copy-btn" type="button" onclick="copyEditorText(this)">Copy full text</button>
-          <button class="editor-clear" type="button" onclick="clearEnyeEditor()">Clear</button>
+          <button class="copy-btn" type="button" onclick="insertEnyeAtCursor('Ñ')">Insert Ñ at cursor</button>
+          <button class="copy-btn" type="button" onclick="insertEnyeAtCursor('ñ')">Insert ñ at cursor</button>
+          <button class="copy-btn" type="button" onclick="copyEditorText(this)">Copy finished text</button>
+          <button class="editor-clear" type="button" onclick="clearEnyeEditor()">Clear text</button>
         </div>
-        <p class="editor-note">Tip: If you select part of the text first, the inserted character replaces that selection. Your original spelling stays under your control.</p>
+        <p class="editor-note">Example: type <strong>manana</strong>, tap between the second n and the a, then insert <strong>ñ</strong> to make <strong>mañana</strong>. Your text stays in this page's editor and is not saved to an account.</p>
       </div>
     </section>
 
@@ -1052,24 +1084,28 @@
          FILIPINO NAME SPELLING
     ========================= -->
 
-    <section class="container section" aria-labelledby="filipino-names-heading">
+    <section class="container section" aria-labelledby="global-usage-heading">
       <div class="card">
-        <h2 class="section-heading" id="filipino-names-heading">Using Enye in Filipino Names and Places</h2>
+        <h2 class="section-heading" id="global-usage-heading">Ñ in Spanish, Filipino and Personal Names</h2>
         <p class="section-intro">
-          Ñ and ñ can appear in Filipino personal names, family names and place names. When entering someone’s name in a school, work, travel or government form, preserve the spelling they use on their official document. Do not change Ñ to N just because the form or keyboard makes it inconvenient.
+          The letter Ñ is used in Spanish words and names, and it also appears in Filipino names and place names. It is a distinct letter, not a decorative N. When writing a person's name, keep the spelling and capitalization they use.
         </p>
         <div class="info-grid">
           <div class="info-box">
-            <h3>Examples with enye</h3>
+            <h3>Spanish words</h3>
+            <div class="info-row"><span class="info-value">España</span><button class="small-copy" type="button" onclick="copyText('España', this, 'España copied!')">Copy</button></div>
+            <div class="info-row"><span class="info-value">niño</span><button class="small-copy" type="button" onclick="copyText('niño', this, 'niño copied!')">Copy</button></div>
+            <div class="info-row"><span class="info-value">mañana</span><button class="small-copy" type="button" onclick="copyText('mañana', this, 'mañana copied!')">Copy</button></div>
+            <div class="info-row"><span class="info-value">señor</span><button class="small-copy" type="button" onclick="copyText('señor', this, 'señor copied!')">Copy</button></div>
+          </div>
+          <div class="info-box">
+            <h3>Filipino names and places</h3>
             <div class="info-row"><span class="info-value">Iñigo</span><button class="small-copy" type="button" onclick="copyText('Iñigo', this, 'Iñigo copied!')">Copy</button></div>
             <div class="info-row"><span class="info-value">Peñafrancia</span><button class="small-copy" type="button" onclick="copyText('Peñafrancia', this, 'Peñafrancia copied!')">Copy</button></div>
             <div class="info-row"><span class="info-value">Muñoz</span><button class="small-copy" type="button" onclick="copyText('Muñoz', this, 'Muñoz copied!')">Copy</button></div>
           </div>
-          <div class="info-box">
-            <h3>Choose the correct form</h3>
-            <p><strong>Ñ</strong> is uppercase; <strong>ñ</strong> is lowercase. They are separate characters, not decorative versions of N and n. If you are copying a person’s name, use the exact capitalization and spelling supplied by that person.</p>
-          </div>
         </div>
+        <p class="editor-note">Uppercase <strong>Ñ</strong> and lowercase <strong>ñ</strong> are different forms of the same letter. Use the form that matches the original word or person's name.</p>
       </div>
     </section>
 
