@@ -12,7 +12,7 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #333; line-height: 1.6; }
     .container { width: 100%; max-width: 850px; margin: 0 auto; padding: 0 20px; }
     
-    header { background: #fff; padding: 15px 0; border-bottom: 1px solid #e0e0e0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    header { position: sticky; top: 0; z-index: 100; background: #fff; padding: 15px 0; border-bottom: 1px solid #e0e0e0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
     .header-content { display: flex; justify-content: space-between; align-items: center; }
     .logo { font-size: 24px; font-weight: 700; color: #0066cc; text-decoration: none; }
     .logo-span { color: #00aa44; }
@@ -21,11 +21,11 @@
     .nav a { color: #555; text-decoration: none; font-size: 15px; font-weight: 600; }
     .nav a:hover { color: #0066cc; }
     @media(max-width: 650px) {
-      .header-content { flex-wrap: wrap; }
+      .header-content { flex-wrap: nowrap; }
       .menu-toggle { display: inline-flex; margin-left: auto; }
-      .nav { display: none; flex: 0 0 100%; flex-direction: column; align-items: stretch; gap: 0; padding-top: 8px; }
+      .nav { display: none; position: absolute; top: calc(100% + 8px); right: 20px; z-index: 110; width: min(250px, calc(100vw - 40px)); flex-direction: column; align-items: stretch; gap: 0; padding: 10px 16px; background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.14); }
       .nav.show { display: flex; }
-      .nav a { padding: 11px 2px; border-top: 1px solid #eef1f4; }
+      .nav a { display: block; padding: 12px 6px; border-top: 1px solid #eef1f4; }
     }
 
     .hero-section { text-align: center; padding: 40px 10px 20px; }
