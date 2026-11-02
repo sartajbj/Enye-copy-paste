@@ -185,6 +185,23 @@
       padding: 0 20px;
     }
 
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -60px;
+      z-index: 2000;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--blue);
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(0,0,0,.15);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
     .editor-steps {
       margin: 12px 0 4px 22px;
       padding: 0;
@@ -887,6 +904,8 @@
 
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <!-- =========================
        HEADER
   ========================= -->
@@ -903,6 +922,7 @@
           class="menu-toggle"
           type="button"
           aria-label="Open navigation menu"
+          aria-controls="navMenu"
           aria-expanded="false"
           onclick="toggleMobileMenu()"
         >
@@ -922,7 +942,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content">
 
     <!-- =========================
          HERO
@@ -1832,14 +1852,40 @@
 
       var isOpen = menu.classList.toggle("show");
 
-      toggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-      );
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
     }
 
 
-    /* Close mobile menu after navigation */
+    /* Close the menu after a navigation link is chosen */
+    document.querySelectorAll("#navMenu a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        var menu = document.getElementById("navMenu");
+        var toggle = document.querySelector(".menu-toggle");
+        if (menu && toggle) {
+          menu.classList.remove("show");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open navigation menu");
+        }
+      });
+    });
+
+
+    /* Close mobile menu after navigation or Escape */
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        var menu = document.getElementById("navMenu");
+        var toggle = document.querySelector(".menu-toggle");
+        if (menu && toggle && menu.classList.contains("show")) {
+          menu.classList.remove("show");
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.setAttribute("aria-label", "Open navigation menu");
+          toggle.focus();
+        }
+      }
+    });
+
+
     document.addEventListener("click", function(event) {
 
       var menu = document.getElementById("navMenu");
