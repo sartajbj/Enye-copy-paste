@@ -814,8 +814,8 @@ Copy Ññ
 
 </div>
 
-<div id="copyStatus" class="copy-status">
-✓ Copied to clipboard
+<div id="copyStatus" class="copy-status" role="status" aria-live="polite">
+✓ Character copied. You can paste it now.
 </div>
 
 </div>
@@ -1547,19 +1547,37 @@ document.body.appendChild(area);
 
 area.select();
 
+var copied=false;
+
 try{
 
-document.execCommand("copy");
-
-showCopied();
+copied=document.execCommand("copy");
 
 }catch(error){
 
-alert("Please select and copy the character manually: " + text);
+copied=false;
 
 }
 
 document.body.removeChild(area);
+
+if(copied){
+
+showCopied();
+
+}else{
+
+var status=document.getElementById("copyStatus");
+
+if(status){
+
+status.textContent="Copy was blocked. Please select the character and copy it manually: " + text;
+
+status.style.display="block";
+
+}
+
+}
 
 }
 
