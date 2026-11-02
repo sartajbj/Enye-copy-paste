@@ -967,9 +967,9 @@
         </p>
 
         <div class="copy-buttons">
-          <button class="copy-btn" type="button" onclick="copyText('Ñ', this, 'Ñ copied!')">Copy Ñ (Big)</button>
-          <button class="copy-btn" type="button" onclick="copyText('ñ', this, 'ñ copied!')">Copy ñ (Small)</button>
-          <button class="copy-btn" type="button" onclick="copyText('Ññ', this, 'Ññ copied!')">Copy Ññ</button>
+          <button class="copy-btn" type="button" onclick="copyText('Ñ', this, 'Ñ copied!')">Copy uppercase Ñ</button>
+          <button class="copy-btn" type="button" onclick="copyText('ñ', this, 'ñ copied!')">Copy lowercase ñ</button>
+          <button class="copy-btn" type="button" onclick="copyText('Ññ', this, 'Ññ copied!')">Copy both Ññ</button>
         </div>
 
         <div class="copy-status" id="copyStatus" aria-live="polite"></div>
@@ -1053,7 +1053,7 @@
         </p>
         <ol class="editor-steps">
           <li><strong>Type or paste</strong> your text in the box.</li>
-          <li><strong>Tap inside the text</strong> where Ñ or ñ should go. Select a letter first if you want to replace it.</li>
+          <li><strong>Tap where it belongs</strong>. Select the letter you want to replace, or place the cursor where the character should be inserted.</li>
           <li><strong>Choose Insert Ñ or Insert ñ</strong>, then tap Copy finished text.</li>
         </ol>
 
@@ -1076,7 +1076,7 @@
           <button class="copy-btn" type="button" onclick="copyEditorText(this)">Copy finished text</button>
           <button class="editor-clear" type="button" onclick="clearEnyeEditor()">Clear text</button>
         </div>
-        <p class="editor-note">Example: type <strong>manana</strong>, tap between the second n and the a, then insert <strong>ñ</strong> to make <strong>mañana</strong>. Your text stays in this page's editor and is not saved to an account.</p>
+        <p class="editor-note">Example: type <strong>manana</strong>, select its first <strong>n</strong>, then tap <strong>Insert ñ</strong> to make <strong>mañana</strong>. Your text stays in this page's editor and is not saved to an account.</p>
       </div>
     </section>
 
