@@ -713,53 +713,6 @@
        ENYE TEXT EDITOR
     ========================= */
 
-    var enyeEditor = document.getElementById("enyeTextEditor");
-    var enyeEditorCount = document.getElementById("editor-count");
-
-    if (enyeEditor && enyeEditorCount) {
-      enyeEditor.addEventListener("input", function() {
-        enyeEditorCount.textContent = enyeEditor.value.length + " / 2000";
-      });
-    }
-
-    function insertEnyeAtCursor(character) {
-      var editor = document.getElementById("enyeTextEditor");
-      if (!editor) return;
-
-      var start = editor.selectionStart;
-      var end = editor.selectionEnd;
-      var before = editor.value.slice(0, start);
-      var after = editor.value.slice(end);
-
-      editor.value = before + character + after;
-      var cursor = start + character.length;
-      editor.focus();
-      editor.setSelectionRange(cursor, cursor);
-
-      if (enyeEditorCount) {
-        enyeEditorCount.textContent = editor.value.length + " / 2000";
-      }
-    }
-
-    function copyEditorText(button) {
-      var editor = document.getElementById("enyeTextEditor");
-      if (!editor || !editor.value.trim()) {
-        var status = document.getElementById("copyStatus");
-        if (status) status.textContent = "Add some text before copying.";
-        return;
-      }
-      copyText(editor.value, button, "Your text copied!");
-    }
-
-    function clearEnyeEditor() {
-      var editor = document.getElementById("enyeTextEditor");
-      if (!editor) return;
-      editor.value = "";
-      editor.focus();
-      if (enyeEditorCount) enyeEditorCount.textContent = "0 / 2000";
-    }
-
-
     /* =========================
        FAQ
     ========================= */
@@ -1762,6 +1715,52 @@
       }
     }
 
+
+    /* ENYE TEXT EDITOR */
+    var enyeEditor = document.getElementById("enyeTextEditor");
+    var enyeEditorCount = document.getElementById("editor-count");
+    if (enyeEditor && enyeEditorCount) {
+      enyeEditor.addEventListener("input", function() {
+        enyeEditorCount.textContent = enyeEditor.value.length + " / 2000";
+      });
+    }
+    function insertEnyeAtCursor(character) {
+      var editor = document.getElementById("enyeTextEditor");
+      if (!editor) return;
+      var start = editor.selectionStart, end = editor.selectionEnd;
+      var nextValue = editor.value.slice(0, start) + character + editor.value.slice(end);
+      if (nextValue.length > editor.maxLength) {
+        var status = document.getElementById("copyStatus");
+        if (status) status.textContent = "Text limit reached. Remove some text first.";
+        return;
+      }
+      editor.value = nextValue;
+      var cursor = start + character.length;
+      editor.focus();
+      editor.setSelectionRange(cursor, cursor);
+      if (enyeEditorCount) enyeEditorCount.textContent = editor.value.length + " / 2000";
+      editor.dispatchEvent(new Event("input", { bubbles: true }));
+    }
+    function copyEditorText(button) {
+      var editor = document.getElementById("enyeTextEditor");
+      if (!editor || !editor.value.trim()) {
+        var status = document.getElementById("copyStatus");
+        if (status) status.textContent = "Type or insert some text before copying.";
+        if (editor) editor.focus();
+        return;
+      }
+      copyText(editor.value, button, "Your text copied!");
+    }
+    function clearEnyeEditor() {
+      var editor = document.getElementById("enyeTextEditor");
+      if (!editor) return;
+      editor.value = "";
+      if (enyeEditorCount) enyeEditorCount.textContent = "0 / 2000";
+      var status = document.getElementById("copyStatus");
+      if (status) status.textContent = "Text cleared.";
+      editor.focus();
+      editor.dispatchEvent(new Event("input", { bubbles: true }));
+    }
 
     /* =========================
        FAQ
